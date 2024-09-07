@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gamer Café</title>
+    <!-- Insertion de Bootstrap CSS pour le style de la page -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icônes Bootstrap pour une meilleure présentation visuelle -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <!-- Lien vers le fichier CSS personnalisé pour des styles additionnels -->
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles2.css">
+    <!-- Inclusion du fichier JavaScript pour les interactions -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Header avec logo centré, bouton menu à gauche et boutons connexion/inscription -->
+    <header class="d-flex justify-content-between align-items-center p-3 bg-dark text-white fixed-top">
+        <!-- Bouton de menu à gauche -->
+        <div class="menu-button">
+            <button class="btn btn-warning dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Menu
+            </button>
+            <div class="dropdown-menu bg-warning" aria-labelledby="menuButton">
+                <!-- Liens de menu pour accéder aux différentes sections du site -->
+                <a class="dropdown-item text-dark" href="#">Devis Site Web</a>
+                <a class="dropdown-item text-dark" href="tarif.html">Tarif pour la création du site web</a>
+                <a class="dropdown-item text-dark" href="#">Projet Jeux Vidéo</a>
+                <a class="dropdown-item text-dark" href="#">Boutique</a>
+                <a class="dropdown-item text-dark" href="index1.4.html">Acceuil</a>
+            </div>
+        </div>
+        <!-- Logo centré -->
+        <div class="header-logo">
+            <img src="images/01.png" alt="Logo" class="img-fluid">
+        </div>
+        <!-- Boutons Connexion et Inscription -->
+        <div class="login d-flex">
+            <button class="btn btn-warning">Connexion</button>
+            <a href="#" class="btn btn-warning ml-2">Inscription</a>
+        </div>
+    </header>
+
+ <!-- Section des tarifs -->
+<section class="pricing-section mt-5">
+    <h2 class="text-center mb-4">Nos Tarifs</h2>
+
+    <!-- Cadre pour le Site Vitrine -->
+    <div class="pricing-card">
+        <div class="pricing-header">
+            <i class="bi bi-gem"></i>
+            <h3>Site Vitrine</h3>
+            <div class="price">
+                <span class="icon-euro">€</span> 1 500
+            </div>
+        </div>
+        <p>Idéal pour présenter votre entreprise ou votre activité. Un design simple mais efficace.</p>
+        <p class="details">Inclus : pages de présentation, galerie photos, formulaire de contact.</p>
+    </div>
+
+    <!-- Cadre pour le Site E-commerce -->
+    <div class="pricing-card">
+        <div class="pricing-header">
+            <i class="bi bi-cart"></i>
+            <h3>Site E-commerce</h3>
+            <div class="price">
+                <span class="icon-euro">€</span> 3 500
+            </div>
+        </div>
+        <p>Vendez vos produits en ligne avec une boutique complète, gestion des stocks et paiements sécurisés.</p>
+        <p class="details">Inclus : catalogue produits, paiement en ligne, gestion des commandes.</p>
+    </div>
+
+    <!-- Cadre pour le Site Sur Mesure -->
+    <div class="pricing-card">
+        <div class="pricing-header">
+            <i class="bi bi-wrench"></i>
+            <h3>Site Sur Mesure</h3>
+            <div class="price">
+                <span class="icon-euro">€</span> 5 000
+            </div>
+        </div>
+        <p>Un site totalement adapté à vos besoins spécifiques, avec des fonctionnalités avancées.</p>
+        <p class="details">Inclus : développement personnalisé, intégration API, design unique.</p>
+    </div>
+
+    <!-- Cadre pour Maintenance et Mise en Ligne -->
+    <div class="pricing-card">
+        <div class="pricing-header">
+            <i class="bi bi-cloud-upload"></i>
+            <h3>Mises à Jour & Mise en Ligne</h3>
+            <div class="price">
+                <span class="icon-euro">€</span> 150 / mois
+            </div>
+        </div>
+        <p>Nous nous occupons des mises à jour régulières et de la mise en ligne de votre site.</p>
+        <p class="details">Inclus : mises à jour de sécurité, modifications mineures, optimisation.</p>
+    </div>
+</section>
+
+
+    <!-- Footer avec des icônes de réseaux sociaux et des informations de copyright -->
+    <footer class="d-flex justify-content-center align-items-center p-3 bg-dark text-white fixed-bottom">
+        <p class="text-center">&copy; 2024 Le Gamer Café - Tous droits réservés</p>
+        <div class="social-icons ml-auto">
+            <a href="https://www.facebook.com/p/Le-Gamer-Caf%C3%A9-100064094588273/?_rdr" class="text-white mr-3" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/LeGamerCafe" class="text-white mr-3" aria-label="Twitter">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/LeGamerCafe/" class="text-white" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts nécessaires pour le fonctionnement de Bootstrap et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

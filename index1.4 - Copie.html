@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Café</title>
+    <!-- Insertion de Bootstrap CSS pour le style de la page -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icônes Bootstrap pour une meilleure présentation visuelle -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <!-- Lien vers le fichier CSS personnalisé pour des styles additionnels -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclusion du fichier JavaScript pour les interactions -->
+    <script src="script.js"></script>
+    <style>
+        /* Styles spécifiques pour l'adaptation mobile */
+        .login button,
+        .login a {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .logo img {
+            height: 120px;
+            max-width: 100%; /* Assurer que l'image ne dépasse pas la largeur de son conteneur */
+            height: auto; /* Conserver les proportions de l'image */
+        }
+
+        .image-item img {
+            width: 100%; /* Assurer que les images utilisent toute la largeur disponible */
+            height: auto; /* Conserver les proportions des images */
+        }
+
+        /* Cacher la navigation sur mobile */
+        .nav {
+            display: none;
+        }
+
+        .header-logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .menu-button {
+            flex: 0;
+        }
+
+        .header-logo img {
+            height: 40px; /* Ajustement de la taille du logo pour le rendre moins compressé */
+        }
+
+        .login {
+            flex: 0;
+        }
+
+        /* Réduction de la taille du texte sur mobile */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p.lead {
+                font-size: 14px;
+            }
+
+            ul li {
+                font-size: 14px;
+            }
+
+            .image-item img {
+                height: auto; /* Ajustement pour que les images soient proportionnées */
+                max-height: 200px; /* Limiter la hauteur des images */
+            }
+
+            .introduction img {
+                height: auto; /* Ajustement pour les images de la section "À propos" */
+                max-height: 100px; /* Limiter la hauteur des images */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex; /* Afficher les liens de navigation sur les écrans moyens et grands */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header avec logo centré, bouton menu à gauche et boutons connexion/inscription -->
+    <header class="d-flex justify-content-between align-items-center p-3 bg-dark text-white fixed-top">
+        <!-- Bouton de menu à gauche -->
+        <div class="menu-button">
+            <button class="btn btn-warning dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Menu
+            </button>
+            <div class="dropdown-menu bg-warning" aria-labelledby="menuButton">
+                <!-- Liens de menu pour accéder aux différentes sections du site -->
+                <a class="dropdown-item text-dark" href="#">Devis Site Web</a>
+                <a class="dropdown-item text-dark" href="#">Tarif pour la création du site web</a>
+                <a class="dropdown-item text-dark" href="#">Projet Jeux Vidéo</a>
+                <a class="dropdown-item text-dark" href="#">Boutique</a>
+                <a class="dropdown-item text-dark" href="#">Nous contacter</a>
+            </div>
+        </div>
+        <!-- Logo centré -->
+        <div class="header-logo">
+            <img src="images/01.png" alt="Logo" class="img-fluid">
+        </div>
+        <!-- Boutons Connexion et Inscription -->
+        <div class="login d-flex">
+            <button class="btn btn-warning">Connexion</button>
+            <a href="#" class="btn btn-warning ml-2">Inscription</a>
+        </div>
+    </header>
+
+    <main class="container my-5 fade-in">
+        <!-- Section Nos Services en premier -->
+        <section class="image-grid mt-5">
+            <h2>Nos Services</h2>
+            <div class="image-container">
+                <!-- Image de devis avec effet de survol pour afficher le texte -->
+                <div class="image-item">
+                    <img src="images/site1.png" alt="Devis" class="img-fluid">
+                    <div class="overlay">Devis</div>
+                </div>
+                <!-- Exemple de site web pour montrer des réalisations passées -->
+                <div class="image-item">
+                    <img src="images/site2.png" alt="Exemple de site web" class="img-fluid">
+                    <div class="overlay">Exemple de site web</div>
+                </div>
+                <!-- Image présentant les tarifs de création de sites -->
+                <div class="image-item">
+                    <img src="images/tarifs.png" alt="Tarifs" class="img-fluid">
+                    <div class="overlay">Nos tarifs</div>
+                </div>
+                <!-- Section dédiée au projet de jeux vidéo en développement -->
+                <div class="image-item">
+                    <img src="images/jeuxvideo.png" alt="Jeux vidéo" class="img-fluid">
+                    <div class="overlay">Jeux vidéo</div>
+                </div>
+                <!-- Boutique pour vendre des produits dérivés -->
+                <div class="image-item">
+                    <img src="images/boutique.png" alt="Boutique" class="img-fluid">
+                    <div class="overlay">Boutique</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section d'accueil avec logo et description de l'entreprise -->
+        <section class="welcome text-center mt-5">
+            <img src="images/01.png" alt="Logo" class="img-fluid" style="height: 60px;">
+            <h3>Expertise et Passion au Service de Votre Projet Web</h3>
+            <p class="lead">
+                Transformez votre présence en ligne avec Le Gamer Café, le partenaire de confiance pour vos projets web.
+                Notre expérience de 7 ans dans l'informatique et la gestion de sites web se traduit par des créations modernes,
+                fonctionnelles et personnalisées, répondant aux besoins de chaque client. En plus de nos services de création de sites,
+                nous vous invitons à découvrir notre boutique de produits dérivés : des tasses, des stylos et des tee-shirts à l'effigie
+                de notre entreprise. Avec nous, bénéficiez non seulement d'un site web performant mais aussi de produits qui reflètent
+                votre identité et votre passion.
+            </p>
+        </section>
+
+        <!-- Section décrivant les services principaux proposés par l'entreprise -->
+        <section class="introduction mt-5">
+            <h2>Ce que nous proposons :</h2>
+            <ul>
+                <!-- Liste des services avec descriptions détaillées -->
+                <li><strong>Création de sites web sur mesure :</strong> Nous concevons des sites web personnalisés qui répondent à
+                    vos besoins spécifiques. Que vous soyez une petite entreprise ou un particulier, nous vous aidons à établir
+                    une présence en ligne professionnelle et efficace.</li>
+                <li><strong>Devis en ligne :</strong> Obtenez un devis personnalisé pour votre projet web directement depuis notre site.
+                    Nous vous fournissons des estimations claires et détaillées pour vous permettre de prendre des décisions éclairées.</li>
+                <li><strong>Jeu vidéo en cours de développement :</strong> Découvrez notre projet de jeu vidéo immersif, « Julie l'espionne
+                    des services secrets ». Plongez dans une aventure palpitante où espionnage et mystère se rencontrent.</li>
+                <li><strong>Boutique en ligne :</strong> Explorez notre gamme de produits dérivés, incluant des tasses, des tee-shirts et
+                    d'autres articles uniques à l'effigie de notre entreprise. Des articles parfaits pour les passionnés de gaming et de tech.</li>
+                <li><strong>Compte client personnalisé :</strong> Créez un compte pour un suivi personnalisé de vos projets et commandes.
+                    Restez informé des nouveautés et promotions exclusives sur la création de sites web et les articles de notre boutique.</li>
+            </ul>
+            <!-- Images centrées pour illustrer la section de présentation -->
+            <center>
+                <img src="images/developeur.png" alt="Logo" class="img-fluid" style="height: 120px;">
+                <img src="images/imagedesktop.png" alt="Logo" class="img-fluid" style="height: 120px;">
+                <img src="images/imageshop.png" alt="Logo" class="img-fluid" style="height: 120px;">
+            </center>
+        </section>
+
+        <!-- Section décrivant le parcours professionnel de Julien, fondateur de l'entreprise -->
+        <section class="introduction mt-5">
+            <h2>Historique Professionnel :</h2>
+            <p class="lead">
+                Julien, le fondateur de Le Gamer Café, a commencé sa carrière dans le monde de l'informatique il y a plus de 7 ans.
+                Ses premières expériences se sont concentrées sur la gestion et la maintenance des systèmes informatiques pour diverses
+                entreprises, acquérant ainsi une solide expertise technique. Après avoir travaillé pendant 2 ans sur un projet d'envergure,
+                où il était responsable de la gestion d'un site d'apprentissage en ligne basé sur le CMS Moodle, Julien a décidé de franchir
+                une nouvelle étape dans sa carrière. En 2021, il a créé Le Gamer Café, une entreprise dédiée à la maintenance informatique
+                et à la création de sites web pour professionnels et particuliers. Depuis, il continue de mettre son savoir-faire au service
+                de ses clients, en développant des solutions adaptées à leurs besoins spécifiques.
+            </p>
+            <!-- Image associée à la section Historique Professionnel -->
+            <img src="images/01.png" alt="Apprentissage Ludique" class="img-fluid mt-4" style="height: 60px;">
+        </section>
+    </main>
+
+    <!-- Footer avec des icônes de réseaux sociaux et des informations de copyright -->
+    <footer class="d-flex justify-content-center align-items-center p-3 bg-dark text-white fixed-bottom">
+        <p class="text-center">&copy; 2024 Le Gamer Café - Tous droits réservés</p>
+        <div class="social-icons ml-auto">
+            <a href="https://www.facebook.com/p/Le-Gamer-Caf%C3%A9-100064094588273/?_rdr" class="text-white mr-2">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/legamercafe/?hl=fr" class="text-white mr-2">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-white">
+                <i class="bi bi-youtube"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Inclusion de Bootstrap JS et ses dépendances pour les fonctionnalités interactives -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

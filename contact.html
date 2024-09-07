@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gamer Café</title>
+    <!-- Insertion de Bootstrap CSS pour le style de la page -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icônes Bootstrap pour une meilleure présentation visuelle -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <!-- Lien vers le fichier CSS personnalisé pour des styles additionnels -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclusion du fichier JavaScript pour les interactions -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Header avec logo centré, bouton menu à gauche et boutons connexion/inscription -->
+    <header class="d-flex justify-content-between align-items-center p-3 bg-dark text-white fixed-top">
+        <!-- Bouton de menu à gauche -->
+        <div class="menu-button">
+            <button class="btn btn-warning dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Menu
+            </button>
+            <div class="dropdown-menu bg-warning" aria-labelledby="menuButton">
+                <!-- Liens de menu pour accéder aux différentes sections du site -->
+                <a class="dropdown-item text-dark" href="#">Devis Site Web</a>
+                <a class="dropdown-item text-dark" href="tarif.html">Tarif pour la création du site web</a>
+                <a class="dropdown-item text-dark" href="#">Projet Jeux Vidéo</a>
+                <a class="dropdown-item text-dark" href="#">Boutique</a>
+                <a class="dropdown-item text-dark" href="index1.4.html">Acceuil</a>
+            </div>
+        </div>
+        <!-- Logo centré -->
+        <div class="header-logo">
+            <img src="images/01.png" alt="Logo" class="img-fluid">
+        </div>
+        <!-- Boutons Connexion et Inscription -->
+        <div class="login d-flex">
+            <button class="btn btn-warning">Connexion</button>
+            <a href="#" class="btn btn-warning ml-2">Inscription</a>
+        </div>
+    </header>
+
+    <main class="container my-5 fade-in">
+        <!-- Section Contact -->
+        <section class="contact-form mt-5">
+            <h2>Contactez-nous</h2>
+            <form action="send_mail.php" method="post">
+                <div class="form-group">
+                    <label for="firstName">Prénom :</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nom :</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Objet :</label>
+                    <select id="subject" name="subject" class="form-control" required>
+                        <option value="">Choisissez un objet</option>
+                        <option value="Devis">Devis</option>
+                        <option value="Autre demande">Autre demande</option>
+                        <option value="Projet jeux vidéo">Projet jeux vidéo</option>
+                        <option value="Demande boutique">Demande boutique</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer avec des icônes de réseaux sociaux et des informations de copyright -->
+    <footer class="d-flex justify-content-center align-items-center p-3 bg-dark text-white fixed-bottom">
+        <p class="text-center">&copy; 2024 Le Gamer Café - Tous droits réservés</p>
+        <div class="social-icons ml-auto">
+            <a href="https://www.facebook.com/p/Le-Gamer-Caf%C3%A9-100064094588273/?_rdr" class="text-white mr-3" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/LeGamerCafe" class="text-white mr-3" aria-label="Twitter">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/LeGamerCafe/" class="text-white" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts nécessaires pour le fonctionnement de Bootstrap et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

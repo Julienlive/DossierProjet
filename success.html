@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Envoyé</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Mise en place du style global pour toute la page */
+        body {
+            display: flex; /* On centre le contenu en mode flex */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Prends toute la hauteur de la fenetre */
+            margin: 0;
+            background-color: #f4f4f9; /* Couleur de fond claire */
+            font-family: Arial, sans-serif; /* Police de base */
+        }
+
+        .success-container {
+            text-align: center; /* Centre tout le texte et les elements a l'interieur */
+        }
+
+        /* Style pour le message de succès qui s'affiche en gros */
+        .success-message {
+            font-size: 2rem; /* Taille du texte assez grand */
+            font-weight: bold; /* Texte en gras */
+            color: #4caf50; /* Couleur verte pour le succès */
+            margin-bottom: 20px; /* Espace en bas du texte */
+        }
+
+        /* Rond avec le symbole check qui s'affiche au centre */
+        .checkmark {
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%; /* Pour avoir un rond */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0f7e9; /* Fond vert clair */
+            position: relative;
+            animation: scaleIn 0.6s ease-out; /* Animation zoom pour l'effet d'apparition */
+        }
+
+        .checkmark::before {
+            content: '✔'; /* Le symbole de check */
+            font-size: 2.5rem; /* Taille du check */
+            color: #4caf50; /* Meme vert que le message */
+            opacity: 0; /* On commence invisible */
+            animation: fadeIn 0.4s 0.2s forwards; /* Apparition douce apres l'animation du rond */
+        }
+
+        /* Animation du rond qui apparait avec un zoom */
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.5); /* Commence petit */
+                opacity: 0; /* Et invisible */
+            }
+            to {
+                transform: scale(1); /* Arrive à la taille normale */
+                opacity: 1; /* Devient visible */
+            }
+        }
+
+        /* Animation pour faire apparaitre le check */
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Devient visible */
+            }
+        }
+
+        /* Style du bouton Suivant */
+        .btn-next {
+            margin-top: 30px; /* Espace entre le bouton et le check */
+            padding: 10px 20px; /* Un peu d'espace dans le bouton */
+            font-size: 1rem; /* Taille du texte du bouton */
+            color: #ffffff; /* Texte blanc */
+            background-color: #fd7e14; /* Bleu pour le bouton */
+            border: none; /* Pas de bordure */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Pointeur de clic */
+            transition: background-color 0.3s; /* Effet doux pour le survol */
+            text-decoration: none; /* Pas de soulignement */
+            display: inline-block; /* Comportement de bouton */
+        }
+
+        .btn-next:hover {
+            background-color: #0056b3; /* Couleur plus foncée au survol */
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="checkmark"></div> <!-- Le rond avec le symbole check -->
+        <p class="success-message">Envoi de votre message avec succès !</p> <!-- Texte de confirmation -->
+        <a href="index1.4.html" class="btn-next">Suivant</a> <!-- Bouton qui mène vers la page suivante -->
+    </div>
+</body>
+</html>

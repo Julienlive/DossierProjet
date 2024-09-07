@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gamer Café</title>
+    <!-- Insertion de Bootstrap CSS pour le style de la page -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icônes Bootstrap pour une meilleure présentation visuelle -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <!-- Lien vers le fichier CSS personnalisé pour des styles additionnels -->
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles2.css">
+	 <link rel="stylesheet" href="styles4.css">
+    <!-- Inclusion du fichier JavaScript pour les interactions -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Header avec logo centré, bouton menu à gauche et boutons connexion/inscription -->
+    <header class="d-flex justify-content-between align-items-center p-3 bg-dark text-white fixed-top">
+        <!-- Bouton de menu à gauche -->
+        <div class="menu-button">
+            <button class="btn btn-warning dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Menu
+            </button>
+            <div class="dropdown-menu bg-warning" aria-labelledby="menuButton">
+                <!-- Liens de menu pour accéder aux différentes sections du site -->
+                <a class="dropdown-item text-dark" href="#">Devis Site Web</a>
+                <a class="dropdown-item text-dark" href="tarif.html">Tarif pour la création du site web</a>
+                <a class="dropdown-item text-dark" href="#">Projet Jeux Vidéo</a>
+                <a class="dropdown-item text-dark" href="#">Boutique</a>
+                <a class="dropdown-item text-dark" href="index1.4.html">Acceuil</a>
+            </div>
+        </div>
+        <!-- Logo centré -->
+        <div class="header-logo">
+            <img src="images/01.png" alt="Logo" class="img-fluid">
+        </div>
+        <!-- Boutons Connexion et Inscription -->
+        <div class="login d-flex">
+            <button class="btn btn-warning">Connexion</button>
+            <a href="#" class="btn btn-warning ml-2">Inscription</a>
+        </div>
+    </header>
+
+     <!-- Section du jeu vidéo avec détails -->
+    <main class="container my-5">
+        <section class="service-section">
+            <!-- Carte pour le projet de jeu vidéo -->
+            <div class="service-card">
+                <div class="service-header">
+                    <i class="bi bi-controller"></i>
+                    <h3>Julie l'Espionne des Services Secrets</h3>
+                    <div class="price">
+                        En développement
+                    </div>
+                </div>
+                <p>Plongez dans une aventure captivante avec "Julie l'Espionne des Services Secrets", un jeu vidéo
+                    immersif qui combine espionnage, mystère, et action. Vous incarnez Julie, une espionne aguerrie
+                    chargée d'une mission top secrète. Armée de gadgets futuristes et de compétences hors du commun, elle
+                    doit naviguer dans un monde truffé de pièges, déjouer les plans d'organisations criminelles, et
+                    découvrir des secrets bien gardés.</p>
+                <p class="details">Le jeu propose des mécaniques de jeu innovantes, avec des énigmes stimulantes, des
+                    combats intenses, et une histoire riche et profonde qui évolue en fonction de vos choix. Préparez-vous
+                    à vivre une expérience unique qui mettra vos talents de stratège et d'espion à l'épreuve.</p>
+                <img src="images/jeuxvideo.png" alt="Jeux vidéo" class="img-fluid mt-3">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer avec des icônes de réseaux sociaux et des informations de copyright -->
+    <footer class="d-flex justify-content-center align-items-center p-3 bg-dark text-white fixed-bottom">
+        <p class="text-center">&copy; 2024 Le Gamer Café - Tous droits réservés</p>
+        <div class="social-icons ml-auto">
+            <a href="https://www.facebook.com/p/Le-Gamer-Caf%C3%A9-100064094588273/?_rdr" class="text-white mr-3" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/LeGamerCafe" class="text-white mr-3" aria-label="Twitter">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/LeGamerCafe/" class="text-white" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts nécessaires pour le fonctionnement de Bootstrap et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

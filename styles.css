@@ -1,0 +1,286 @@
+/* Style général du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.png'); /* Remplace 'background.png' par le chemin correct */
+    background-size: cover; /* Pour que l'image couvre tout l'écran */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+    background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
+    background-position: center; /* Pour centrer l'image */
+    padding-top: 80px; /* Pour éviter que le contenu ne passe sous le header */
+    padding-bottom: 60px; /* Pour éviter que le contenu ne passe sous le footer */
+}
+
+/* Style du header */
+header {
+    z-index: 1030; /* Assure que le header est au-dessus du contenu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40; /* Couleur de fond du header */
+    padding: 10px 20px;
+}
+
+/* Style du logo dans le header */
+header .header-logo img {
+    height: 60px; /* Taille du logo sur les formats desktop */
+}
+
+/* Style des liens de navigation dans le header */
+header .nav-link {
+    font-weight: bold;
+}
+
+header .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Style des boutons de connexion et d'inscription */
+.login button,
+.login a {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login button:hover,
+.login a:hover {
+    background-color: #e59400;
+}
+
+/* Style des sections d'accueil et d'introduction */
+.welcome,
+.introduction {
+    background-color: rgba(255, 255, 255, 0.9); /* Blanc avec 90% d'opacité */
+    padding: 20px; /* Un peu d'espace autour du texte */
+    border-radius: 10px; /* Coins arrondis pour un style moderne */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour ajouter de la profondeur */
+    margin-bottom: 20px; /* Espacement entre les sections */
+}
+
+/* Style de la section Historique Professionnel */
+.historique-professionnel {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Animation pour l'effet de fondu */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Style de la grille d'images dans la section Nos Services */
+.image-grid {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Conteneur des images dans la grille */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Ajout pour gérer les images sur plusieurs lignes */
+    justify-content: center; /* Centrer les images */
+    gap: 20px; /* Espace entre les images */
+}
+
+/* Style des éléments d'image */
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 180px; /* Limiter la largeur des images en mode bureau */
+}
+
+/* Style des images */
+.image-item img {
+    width: 100%;
+    height: auto; /* Maintenir la proportion des images */
+    transition: transform 0.3s;
+}
+
+/* Effet de zoom au survol des images */
+.image-item:hover img {
+    transform: scale(1.05); /* Effet de zoom */
+}
+
+/* Style des overlays de texte */
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffa500;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Afficher l'overlay au survol de l'image */
+.image-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Style pour les textes des boutons images en mode mobile */
+.text-overlay {
+    font-size: 0.8em; /* Réduction de la taille du texte des overlays pour qu'ils s'adaptent mieux */
+}
+
+/* Animation pour l'effet de fondu */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style des icônes sociales dans le footer */
+footer .social-icons i {
+    font-size: 1.5em;
+}
+
+/* Nouveau style pour le menu déroulant */
+.dropdown-menu {
+    background-color: #ffa500;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #e59400;
+    color: #000;
+}
+
+/* Style du footer */
+footer {
+    display: flex;
+    justify-content: space-between; /* Espace les éléments du footer */
+    align-items: center;
+}
+
+/* Style du texte du copyright */
+footer p {
+    margin: 0;
+    flex: 1; /* Utilise l'espace disponible */
+    text-align: center; /* Centre le texte */
+}
+
+/* Style des icônes sociales */
+.social-icons {
+    margin-left: auto; /* Les garde à droite */
+    display: flex;
+}
+
+.social-icons i {
+    font-size: 1.5em; /* Taille des icônes */
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 768px) {
+    header .header-logo img {
+        height: 30px; /* Réduire la taille du logo pour mobile */
+    }
+
+    .login button,
+    .login a {
+        font-size: 12px; /* Taille du texte des boutons pour mobile */
+        padding: 5px 10px;
+    }
+
+    .image-item {
+        max-width: 110px; /* Réduire la largeur maximale des images pour mobile */
+    }
+
+    .text-overlay {
+        font-size: 0.6em; /* Réduction de la taille du texte pour les overlays en mode mobile */
+    }
+
+    .welcome h3,
+    .welcome p,
+    .introduction h3, /* Mise à jour pour les titres d'introduction */
+    .introduction ul,
+    .historique-professionnel h3, /* Mise à jour pour les titres d'historique professionnel */
+    .historique-professionnel p {
+        font-size: 0.9em; /* Réduction de la taille des titres et textes des sections pour mobile */
+    }
+
+    .introduction li,
+    .historique-professionnel li {
+        font-size: 0.8em; /* Réduction de la taille des éléments de liste pour mobile */
+    }
+}
+
+/* Style des bulles d'exemples de sites */
+.examples {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Bulle principale */
+.example-bubble {
+    background-color: #333; /* Couleur de fond des bulles */
+    color: #ffa500; /* Couleur du texte */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/* Contenu à l'intérieur de chaque bulle */
+.bubble-content h3 {
+    color: #ffa500; /* Couleur du titre */
+    margin-bottom: 10px;
+}
+
+.bubble-content a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.bubble-content p {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.bubble-content img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.example-bubble:hover {
+    transform: scale(1.05);
+}
+
+.example-bubble:hover img {
+    transform: scale(1.1);
+}
